@@ -21,15 +21,15 @@ from django.conf.urls.static import static
 from app.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('',Home.as_view(),name='Home'),
-    path('Tamil/',Tamil.as_view(),name='Tamil'),
-    path('Hindi/',Hindi.as_view(),name='Hindi'),
-    path('About/',About.as_view(),name='About'),
-    path('Bug/',Bug.as_view(),name='Bug'),
-    path('Enter_Page/',Enter_Page.as_view(),name='Enter_Page'),
-    path('Login/',Login, name='Login'),
+    path('home/',Home.as_view(),name='Home'),
+    path('tamil/',Tamil.as_view(),name='Tamil'),
+    path('hindi/',Hindi.as_view(),name='Hindi'),
+    path('about/',About.as_view(),name='About'),
+    path('bug/',Bug.as_view(),name='Bug'),
+    path('enter_Page/',Enter_Page.as_view(),name='Enter_Page'),
+    path('',Login, name='Login'),
     path('registration/',registration,name='registration'),
-    path('Change_pas/',Change_pas,name='Change_pas'),
+    path('change_pas/',Change_pas,name='Change_pas'),
     path('reset_password/',reset_password,name='reset_password'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
